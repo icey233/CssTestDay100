@@ -1,0 +1,153 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1x4gaVc.ttf) format('truetype');
+}
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background: #fdb03a;
+  color: #fff;
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+.frame .content {
+  position: absolute;
+  height: 40px;
+  width: 130px;
+  top: 180px;
+  left: 135px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 4px 8px 12px 0 rgba(0, 0, 0, 0.1);
+}
+.frame .content .minus {
+  position: absolute;
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  top: 4px;
+  left: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+.frame .content .minus .line {
+  position: absolute;
+  height: 2px;
+  width: 18px;
+  left: 7px;
+  top: 15px;
+  background: #e26e6e;
+  transition: all 0.3s ease-in-out;
+}
+.frame .content .minus:hover {
+  background: #e26e6e;
+}
+.frame .content .minus:hover .line {
+  background: #fff;
+}
+.frame .content .plus {
+  position: absolute;
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  top: 4px;
+  right: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+.frame .content .plus .line-h {
+  position: absolute;
+  height: 2px;
+  width: 18px;
+  left: 7px;
+  top: 15px;
+  background: #8ed273;
+  transition: all 0.3s ease-in-out;
+}
+.frame .content .plus .line-v {
+  position: absolute;
+  height: 18px;
+  width: 2px;
+  left: 15px;
+  top: 7px;
+  background: #8ed273;
+  transition: all 0.3s ease-in-out;
+}
+.frame .content .plus:hover {
+  background: #8ed273;
+}
+.frame .content .plus:hover .line-h,
+.frame .content .plus:hover .line-v {
+  background: #fff;
+}
+.frame .content .number {
+  position: relative;
+  width: 130px;
+  height: 40px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #6a85a0;
+  line-height: 40px;
+  text-align: center;
+}
+.frame .content .number span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform-origin: 50% 50%;
+}
+.frame .content .number span.fadeInUp {
+  animation: fadeIn 0.3s ease-out 0.15s backwards;
+  transform: scale(1);
+  opacity: 1;
+}
+.frame .content .number span.fadeOutUp {
+  animation: fadeOut 0.3s ease-in;
+  transform: scale(1.4);
+  opacity: 0;
+}
+.frame .content .number span.fadeInDown {
+  animation: fadeOut 0.3s ease-out 0.15s reverse backwards;
+  transform: scale(1);
+  opacity: 1;
+}
+.frame .content .number span.fadeOutDown {
+  animation: fadeIn 0.3s ease-in reverse;
+  transform: scale(0.6);
+  opacity: 0;
+}
+@keyframes fadeIn {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
